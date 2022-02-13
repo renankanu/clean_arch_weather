@@ -17,7 +17,7 @@ class RemoteDataSourceImpl implements RemoteDataSource {
     final response = await dioClient.get(Urls.currentWeatherByName(cityName));
 
     if (response.statusCode == 200) {
-      return WeatherModel.fromJson(response.data.toString());
+      return WeatherModel.fromJson(response.data);
     } else {
       throw ServerException();
     }

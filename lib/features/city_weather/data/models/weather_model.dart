@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:clean_arch_weather/features/city_weather/domain/entities/weather.dart';
 import 'package:equatable/equatable.dart';
 
@@ -14,7 +12,7 @@ class WeatherModel extends Equatable {
     required this.humidity,
   });
 
-  factory WeatherModel.fromMap(Map<String, dynamic> json) {
+  factory WeatherModel.fromJson(Map<String, dynamic> json) {
     return WeatherModel(
       cityName: json['name'],
       main: json['weather'][0]['main'],
@@ -25,9 +23,6 @@ class WeatherModel extends Equatable {
       humidity: json['main']['humidity'],
     );
   }
-
-  factory WeatherModel.fromJson(String source) =>
-      WeatherModel.fromMap(json.decode(source));
 
   Weather toEntity() => Weather(
         cityName: cityName,

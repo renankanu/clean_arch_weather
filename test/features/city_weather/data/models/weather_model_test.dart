@@ -1,8 +1,10 @@
+import 'dart:convert';
+
 import 'package:clean_arch_weather/features/city_weather/data/models/weather_model.dart';
 import 'package:clean_arch_weather/features/city_weather/domain/entities/weather.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../../../fixtures/fixture_reader.dart';
+import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
   final tWeatherModel = WeatherModel(
@@ -36,8 +38,9 @@ void main() {
 
   group('from json', () {
     test('should return a valid model from json', () {
+      final tJson = json.decode(fixture('weather_model.json'));
       // act
-      final result = WeatherModel.fromJson(fixture('weather_model.json'));
+      final result = WeatherModel.fromJson(tJson);
       // assert
       expect(result, equals(tWeatherModel));
     });
