@@ -152,6 +152,7 @@ class WeatherPage extends StatelessWidget {
                   );
                 } else if (state is WeatherError) {
                   return Center(
+                    key: Key('weather_error'),
                     child: Text('Something went wrong!'),
                   );
                 } else {

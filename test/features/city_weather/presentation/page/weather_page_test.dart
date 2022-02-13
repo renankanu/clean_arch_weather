@@ -105,4 +105,19 @@ void main() {
       expect(find.byKey(Key('weather_data')), equals(findsOneWidget));
     },
   );
+
+  testWidgets(
+    'should show error message when state is error',
+    (WidgetTester tester) async {
+      // arrange
+      when(() => mockWeatherBloc.state).thenReturn(WeatherError('error'));
+
+      // act
+      await tester.pumpWidget(_makeTestableWidget(WeatherPage()));
+      await tester.pumpAndSettle();
+
+      // assert
+      expect(find.byKey(Key('weather_error')), equals(findsOneWidget));
+    },
+  );
 }
