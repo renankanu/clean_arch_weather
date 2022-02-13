@@ -1,16 +1,5 @@
-# clean_arch_weather
+# Clean Architecture Weather APP
 
-A new Flutter project.
+Processo de desenvolvimento com flutter, implementando a arquitetura limpa e o desenvolvimento orientado por testes
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![clean_arch](https://user-images.githubusercontent.com/7094345/153762252-8fe06389-1d3d-41a7-8c96-5b0274a773f7.png)
