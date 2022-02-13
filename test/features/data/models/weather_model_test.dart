@@ -2,7 +2,7 @@ import 'package:clean_arch_weather/features/city_weather/data/models/weather_mod
 import 'package:clean_arch_weather/features/city_weather/domain/entities/weather.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../../fixtures/fixture_reader.dart';
+import '../../../fixtures/fixture_reader.dart';
 
 void main() {
   final tWeatherModel = WeatherModel(

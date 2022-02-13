@@ -2,15 +2,18 @@ import 'dart:io';
 
 import 'package:clean_arch_weather/core/errors/exception.dart';
 import 'package:clean_arch_weather/core/errors/failure.dart';
+import 'package:clean_arch_weather/features/city_weather/data/datasources/remote_data_source.dart';
 import 'package:clean_arch_weather/features/city_weather/data/models/weather_model.dart';
 import 'package:clean_arch_weather/features/city_weather/data/repositories/weather_repository_impl.dart';
 import 'package:clean_arch_weather/features/city_weather/domain/entities/weather.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
 import 'weather_repository_impl_test.mocks.dart';
 
+@GenerateMocks([RemoteDataSource])
 void main() {
   late MockRemoteDataSource mockRemoteDataSource;
   late WeatherRepositoryImpl repository;
